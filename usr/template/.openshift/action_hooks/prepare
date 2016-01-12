@@ -1,0 +1,10 @@
+#!/bin/bash
+#wget --directory-prefix=$OPENSHIFT_DATA_DIR http://www.atlassian.com/software/bamboo/downloads/binary/atlassian-bamboo-5.6.1.tar.gz
+
+# local testing
+wget --directory-prefix=$OPENSHIFT_DATA_DIR http://10.1.4.181:81/atlassian-bamboo-5.6.1.tar.gz
+
+tar zxvf $OPENSHIFT_DATA_DIR/atlassian-bamboo-5.6.1.tar.gz -C $OPENSHIFT_DATA_DIR/
+rm $OPENSHIFT_DATA_DIR/atlassian-bamboo-5.6.1.tar.gz
+mv $OPENSHIFT_DATA_DIR/atlassian-bamboo-5.6.1 $OPENSHIFT_DATA_DIR/atlassian-bamboo
+mkdir -p $OPENSHIFT_DATA_DIR/atlassian-bamboo/logs

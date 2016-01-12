@@ -1,0 +1,7 @@
+#!/bin/bash
+# The logic to start up your application should be put in this
+# script. The application will work only if it binds to
+# $OPENSHIFT_DIY_IP:8080
+export BAMBOO_HOME=$OPENSHIFT_DATA_DIR/bamboo-home
+
+$OPENSHIFT_DATA_DIR/atlassian-bamboo/bin/startup.sh
